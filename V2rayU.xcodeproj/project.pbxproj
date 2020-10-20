@@ -58,6 +58,7 @@
 		6D6DFC1D9432F2A60D2156E2 /* PreferenceDns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DFEB25B88118513B9F581 /* PreferenceDns.swift */; };
 		6D6DFEA4ED44E1BE02451B6D /* PreferenceAbout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D6DF5D99F2FBB7B53564B3B /* PreferenceAbout.strings */; };
 		6D6DFFD18860EBE148F6DF1F /* PreferencePac.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D6DFE89E1A7BFE2AC1D8871 /* PreferencePac.strings */; };
+		9B99E36F253E960F0086C354 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 9B99E36E253E960F0086C354 /* Preferences */; };
 		9BD4C252253DD50500378392 /* v2ray-core in Resources */ = {isa = PBXBuildFile; fileRef = 667029CF21AFB5730079EF41 /* v2ray-core */; };
 		9BD4C253253DD50600378392 /* v2ray-core in Resources */ = {isa = PBXBuildFile; fileRef = 667029CF21AFB5730079EF41 /* v2ray-core */; };
 		F260898E336CFA5EAB07ADC9 /* Pods_V2rayU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5CE4521706B5A009B08B2 /* Pods_V2rayU.framework */; };
@@ -70,6 +71,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 664EB370216C9A5E00B6AE0D;
 			remoteInfo = V2rayU;
+		};
+		9B00187D253E9B17009D1416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 664EB369216C9A5E00B6AE0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6604E43821798F2900E54AE1;
+			remoteInfo = V2rayULauncher;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -243,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				667029CA21AF8E7A0079EF41 /* Sparkle.framework in Frameworks */,
+				9B99E36F253E960F0086C354 /* Preferences in Frameworks */,
 				66973EB721797719001FEA1E /* ServiceManagement.framework in Frameworks */,
 				F260898E336CFA5EAB07ADC9 /* Pods_V2rayU.framework in Frameworks */,
 			);
@@ -470,6 +479,7 @@
 			);
 			dependencies = (
 				660C8CA52181CBAA00896361 /* PBXTargetDependency */,
+				9B00187E253E9B17009D1416 /* PBXTargetDependency */,
 			);
 			name = V2rayUTests;
 			productName = V2rayUTests;
@@ -494,6 +504,9 @@
 			dependencies = (
 			);
 			name = V2rayU;
+			packageProductDependencies = (
+				9B99E36E253E960F0086C354 /* Preferences */,
+			);
 			productName = V2rayU;
 			productReference = 664EB371216C9A5E00B6AE0D /* V2rayU.app */;
 			productType = "com.apple.product-type.application";
@@ -532,7 +545,7 @@
 					};
 					660C8C9E2181CBAA00896361 = {
 						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 664EB370216C9A5E00B6AE0D;
+						TestTargetID = 6604E43821798F2900E54AE1;
 					};
 					664EB370216C9A5E00B6AE0D = {
 						CreatedOnToolsVersion = 10.0;
@@ -561,6 +574,9 @@
 				"zh-HK",
 			);
 			mainGroup = 664EB368216C9A5E00B6AE0D;
+			packageReferences = (
+				9B99E36D253E960F0086C354 /* XCRemoteSwiftPackageReference "Preferences" */,
+			);
 			productRefGroup = 664EB372216C9A5E00B6AE0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -721,6 +737,11 @@
 			isa = PBXTargetDependency;
 			target = 664EB370216C9A5E00B6AE0D /* V2rayU */;
 			targetProxy = 660C8CA42181CBAA00896361 /* PBXContainerItemProxy */;
+		};
+		9B00187E253E9B17009D1416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6604E43821798F2900E54AE1 /* V2rayULauncher */;
+			targetProxy = 9B00187D253E9B17009D1416 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -911,7 +932,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayU.app/Contents/MacOS/V2rayU";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayULauncher.app/Contents/MacOS/V2rayULauncher";
 			};
 			name = Debug;
 		};
@@ -933,7 +954,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.yanue.v2rayu.V2rayUTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayU.app/Contents/MacOS/V2rayU";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2rayULauncher.app/Contents/MacOS/V2rayULauncher";
 			};
 			name = Release;
 		};
@@ -1203,6 +1224,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B99E36D253E960F0086C354 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Preferences";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B99E36E253E960F0086C354 /* Preferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B99E36D253E960F0086C354 /* XCRemoteSwiftPackageReference "Preferences" */;
+			productName = Preferences;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 664EB369216C9A5E00B6AE0D /* Project object */;
 }

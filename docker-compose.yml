@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  v2rayu:
+    image: v2rayu
+    build:
+      context: .
+      dockerfile: ./Dockerfile
